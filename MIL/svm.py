@@ -2,6 +2,8 @@ import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_is_fitted
 import cvxopt
+from scipy.spatial.distance import cdist
+import inspect
 
 class SVM(BaseEstimator, ClassifierMixin):
     def __init__(self, kernel='linear', C=1.0, p=3, gamma=1e0, scale_C=True,
@@ -22,6 +24,16 @@ class SVM(BaseEstimator, ClassifierMixin):
     def predict(self, **kwargs):
         #check_is_fitted(self, ['coef_'])
         pass
+
+    def _kernel(self, X, Y):
+        if self.kernel == 'rbf':
+            #print(X.shape, Y.shape)
+            K = -self.gamma * cdist(X, Y, 'sqeuclidean')
+
+            return np.exp(K)
+        else:
+            raise ValueError("{0} is invalid kernel".format(self.kernel))
+
 
 class LenearProblem(SVM):
     def __init__(self, kernel='linear', C=1.0, p=3, gamma=1e0, scale_C=True,
@@ -52,3 +64,8 @@ class LenearProblem(SVM):
             raise ValueError("right combination are (G, h, A, b), (G, h), (A, b)")
 
         return self.solve_
+
+    def get_params(self, deep=True):
+        args, _, _, _ = inspect.signature(super(LenearProblem, self).__init__)
+        args.pop(0)
+        return {key: getattr(self, key, None) for key in args}
