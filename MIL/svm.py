@@ -18,7 +18,7 @@ class SVM(BaseEstimator, ClassifierMixin):
         self.max_iter = max_iter
 
     def fit(self, **kwargs):
-        pass
+        return self
 
 
     def predict(self, **kwargs):
@@ -66,6 +66,6 @@ class LenearProblem(SVM):
         return self.solve_
 
     def get_params(self, deep=True):
-        args, _, _, _ = inspect.signature(super(LenearProblem, self).__init__)
+        args, _, _, _ = inspect.getargspec(super(LenearProblem, self).__init__)
         args.pop(0)
         return {key: getattr(self, key, None) for key in args}
