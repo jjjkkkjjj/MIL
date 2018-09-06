@@ -2,23 +2,19 @@ import sys, os
 #os.chdir(os.path.abspath('__file__'))
 sys.path.append(os.path.realpath('..'))
 from MIL.miles import MILES
-from MIL.load_data import load_data
+from MIL.loadmusk import loadmusk
 from sklearn.utils import shuffle
 from sklearn.utils.estimator_checks import check_estimator
 import random as rand
 from sklearn import model_selection, metrics
 import numpy as np
 from sklearn.metrics import accuracy_score
+
+bags, labels = loadmusk('../MIL')
+#exit()
+"""
 from MIL.misvmio import parse_c45, bag_set
 
-#check_estimator(SimpleMIL)
-"""
-seed = 66
-bags, labels, X = load_data('musk1_original')
-train_bags, test_bags, train_labels, test_labels = model_selection.train_test_split(bags, labels, test_size=0.1, random_state=seed)
-
-labels = labels.reshape(labels.shape[0],)
-"""
 # Load list of C4.5 Examples
 example_set = parse_c45('musk1')
 
@@ -28,9 +24,17 @@ bagset = bag_set(example_set)
 # Convert bags to NumPy arrays
 # (The ...[:, 2:-1] removes first two columns and last column,
 #  which are the bag/instance ids and class label)
-bags = [np.array(b.to_float())[:, 2:-1] for b in bagset]
-labels = np.array([b.label for b in bagset], dtype=float)
+abags = [np.array(b.to_float())[:, 2:-1] for b in bagset]
+alabels = np.array([b.label for b in bagset], dtype=float)
 
+with open('musk1-bag.data', 'a') as f:
+    for i, bag in enumerate(abags):
+        np.savetxt(f, np.hstack((np.array([i]*bag.shape[0], dtype=float)[:, np.newaxis], bag)))
+with open('musk1-label.data', 'w') as f:
+    np.savetxt(f, alabels)
+exit()
+"""
+"""
 train_bags = bags[10:]
 train_labels = labels[10:]
 test_bags = bags[:10]
@@ -39,7 +43,7 @@ test_labels = labels[:10]
 
 miles = MILES(negative=0, gamma=1.0/500000, similarity='rbf', lamb=0.45, mu=0.5)
 miles.fit(train_bags, train_labels)
-"""
+
 predictions = miles.predict(train_bags, instancePrediction=False)
 # fot train
 train_labels = np.array(train_labels, dtype=int)

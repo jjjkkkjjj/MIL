@@ -41,7 +41,6 @@ class MILES(LenearProblem):
         number_of_bags = len(newbags)
         n = self.X_.shape[0] # number of instances
 
-
         l_plus = Pbags_indices_of_bags.shape[0]
         l_minus = Nbags_indices_of_bags.shape[0] # note that the number of bags is l_plus + l_minus
 
@@ -109,10 +108,14 @@ class MILES(LenearProblem):
             #print(self.nonzero_w_.T.shape , s_[i].T.shape)
             f = float(self.nonzero_w_.T * s_[i].T) + self.b_
             bag_predictions.append(f)
+            if f > 0:
+                positive_indices.append(i)
         #print(bag_predictions)
         if not instancePrediction:
             return np.array(bag_predictions)
         else:
+            positive_indices = np.array(positive_indices)
+
             pass
 
 

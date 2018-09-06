@@ -2,9 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33672d4e-27bb-4325-95c3-aef6235736c1" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/MIL/loadmusk.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/milestest.ipynb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_BRCR_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/birds_WIWR_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/corel_african_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/elephant_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/fox_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/gauss_data/X_g.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/gauss_data/bagI_gauss.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/gauss_data/bag_g.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/gauss_data/d_g.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_scaled/Bag2_mus_escal.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_scaled/X_mus_escal.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_scaled/bagI_mus_escal.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_scaled/d_mus_escal.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/Bag2_musk_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/X_musk_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/bagI_musk1_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/baglab_musk_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/bags_musk_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk1_unscaled/d_musk_original.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/musk2_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis1_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/mutagenesis2_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_original/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_original/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_original/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_scaled/Bag2.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_scaled/BagI.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/data/tiger_scaled/X.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/load_data.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/MIL/miles.py" afterPath="$PROJECT_DIR$/MIL/miles.py" />
-      <change beforePath="$PROJECT_DIR$/MIL/svm.py" afterPath="$PROJECT_DIR$/MIL/svm.py" />
+      <change beforePath="$PROJECT_DIR$/MIL/misvmio.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/musk1.data" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MIL/musk1.names" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/miles.py" afterPath="$PROJECT_DIR$/test/miles.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,23 +89,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="load_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MIL/load_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <element signature="e#97#125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="miles.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="miles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MIL/miles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="91" column="58" lean-forward="false" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+            <state relative-caret-position="545">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -43,8 +104,8 @@
       <file leaf-file-name="svm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MIL/svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="-103">
+              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -52,12 +113,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miles.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="miles.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/miles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="71" column="38" lean-forward="true" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+            <state relative-caret-position="216">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadmusk.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MIL/loadmusk.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,6 +160,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
@@ -121,8 +195,12 @@
         <option value="$PROJECT_DIR$/MIL/load_data.py" />
         <option value="$PROJECT_DIR$/MIL/svm.py" />
         <option value="$PROJECT_DIR$/MIL/misvmio.py" />
-        <option value="$PROJECT_DIR$/test/miles.py" />
+        <option value="$PROJECT_DIR$/test/milestest.ipynb" />
         <option value="$PROJECT_DIR$/MIL/miles.py" />
+        <option value="$PROJECT_DIR$/MIL/loadmusk.py" />
+        <option value="$PROJECT_DIR$/MIL/musk1-bag.data" />
+        <option value="$PROJECT_DIR$/MIL/musk1-label.data" />
+        <option value="$PROJECT_DIR$/test/miles.py" />
       </list>
     </option>
   </component>
@@ -173,6 +251,12 @@
               <item name="MIL" type="b2602c69:ProjectViewProjectNode" />
               <item name="MIL" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MIL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MIL" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,6 +464,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2522911" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -389,7 +474,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -407,65 +491,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MIL/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/miles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="99" column="21" lean-forward="false" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/simpleMIL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/miles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/load_data.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -499,9 +527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -535,9 +561,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,9 +595,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -668,11 +690,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MIL/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="0">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#97#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -680,6 +700,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#22#69#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -687,8 +710,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="264" column="36" lean-forward="false" selection-start-line="264" selection-start-column="36" selection-end-line="264" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/milestest.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/musk1.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/musk1.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
-            <element signature="e#48#95#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/musk1-bag.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3618">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/miles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/musk1-bag.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="475" column="4290" lean-forward="false" selection-start-line="475" selection-start-column="4290" selection-end-line="475" selection-end-column="4290" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/musk1-label.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIL/loadmusk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -701,31 +799,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/test/.ipynb_checkpoints/milestest-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/miles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="71" column="38" lean-forward="true" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        <state relative-caret-position="216">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MIL/miles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="91" column="58" lean-forward="false" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
