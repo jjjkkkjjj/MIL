@@ -34,7 +34,7 @@ with open('musk1-label.data', 'w') as f:
     np.savetxt(f, alabels)
 exit()
 """
-"""
+
 train_bags = bags[10:]
 train_labels = labels[10:]
 test_bags = bags[:10]
@@ -44,19 +44,19 @@ test_labels = labels[:10]
 miles = MILES(negative=0, gamma=1.0/500000, similarity='rbf', lamb=0.45, mu=0.5)
 miles.fit(train_bags, train_labels)
 
-predictions = miles.predict(train_bags, instancePrediction=False)
+#predictions = miles.predict(train_bags, instancePrediction=False)
 # fot train
-train_labels = np.array(train_labels, dtype=int)
-train_labels[train_labels == 0] = -1
-print(train_labels)
-print(np.sign(predictions))
-accuracy = np.average(train_labels.T == np.sign(predictions))
-print ('\n Accuracy: %.2f%%' % (100 * accuracy))
-exit()
+#train_labels = np.array(train_labels, dtype=int)
+#train_labels[train_labels == 0] = -1
+#print(train_labels)
+#print(np.sign(predictions))
+#accuracy = np.average(train_labels.T == np.sign(predictions))
+#print ('\n Accuracy: %.2f%%' % (100 * accuracy))
 
 
 # for test
-predictions = miles.predict(test_bags, instancePrediction=False)
+predictions, instance_predictions = miles.predict(test_bags, instancePrediction=True)
+print(instance_predictions)
 test_labels = np.array(test_labels, dtype=int)
 test_labels[test_labels == 0] = -1
 print(test_labels)
@@ -75,3 +75,4 @@ def my_scorer(estimator, x, y):
 miles = MILES(negative=0, gamma=1.0/500000, similarity='rbf', lamb=0.45, mu=0.5)
 scores = model_selection.cross_val_score(miles, bags, labels, scoring=my_scorer, cv=5) # label's shape is required for (a,) instead of (a, 1)
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+"""

@@ -6,7 +6,7 @@ import inspect
 
 
 class MILES(LenearProblem):
-    def __init__(self, optimization=1, positive=1, negative=-1, lamb=1, mu=0.2, similarity='rbf',
+    def __init__(self, optimization=1, positive=1, negative=-1, lamb=1, mu=0.2, similarity='rbf', distance='euclidean',
                  kernel='pointless', C=1.0, p=3, gamma=1e0, scale_C=True, verbose=True, tol=1e-7, max_iter=-1):
 
         if kernel != 'pointless':
@@ -14,6 +14,7 @@ class MILES(LenearProblem):
         super(MILES, self).__init__(kernel, C, p, gamma, scale_C, verbose, tol, max_iter)
 
         self.similarity = similarity
+        self.distance =distance
         self.optimization = optimization
         self.positive = positive
         self.negative = negative
@@ -98,9 +99,8 @@ class MILES(LenearProblem):
         check_is_fitted(self, ['s_', 'w_', 'nonzero_w_', 'nonzero_w_indices_','b_', 'X_'])
 
         bag_predictions = []
+        positive_bagindices = []
         # bag prediction
-        positive_indices = []
-
         s_ = self._similarity(bags, self.X_[self.nonzero_w_indices_]) # the k of w = 0 are pointless s_.shape(number of Bags, k)
         #print(s_.shape)
 
@@ -109,14 +109,55 @@ class MILES(LenearProblem):
             f = float(self.nonzero_w_.T * s_[i].T) + self.b_
             bag_predictions.append(f)
             if f > 0:
-                positive_indices.append(i)
+                positive_bagindices.append(i)
+
         #print(bag_predictions)
         if not instancePrediction:
             return np.array(bag_predictions)
         else:
-            positive_indices = np.array(positive_indices)
+            instance_predictions = [] # for only positive bag
 
-            pass
+            positive_bags = [bags[p_index] for p_index in positive_bagindices]
+            U = self._similarity(positive_bags, self.X_[self.nonzero_w_indices_], rtype='argmin') # return list of list (bag num, k)
+            s_ = s_[positive_bagindices, :]
+            Isize = self.nonzero_w_indices_.size
+
+            for i, u in enumerate(U): # for each positive bags
+                """
+                u = [(1,3), (1), (1), (1), (3)]
+                I_(j*=0) = phi = []
+                I_(j*=1) = [0,1,2,3]
+                I_(j*=2) = phi = []
+                I_(j*=3) = [0,4]
+                """
+                m = np.zeros(Isize)
+                I_jstars = [[] for j in range(bags[i].shape[0])]
+                for k in range(Isize):
+                    m[k] += u[k].size
+                    for j in range(bags[i].shape[0]):
+                        if j in u[k]:
+                            I_jstars[j].append(k)
+                #print(m)
+                u_size = np.unique(np.hstack(u)).size
+                j_predictions = []
+                for j, I_jstar in enumerate(I_jstars): # for each instances
+                    if len(I_jstar) == 0: # void class
+                        j_predictions.append(self.negative)
+                    else:
+                        #print(s_[i, I_jstar])
+                        #print(self._similarity([positive_bags[i][j]], self.X_[self.nonzero_w_indices_][I_jstar]))
+                        #exit()
+                        g = float((self.nonzero_w_[I_jstar] / m[I_jstar]).T
+                                  * self._similarity([positive_bags[i][j]], self.X_[self.nonzero_w_indices_][I_jstar]).T)
+                        #print(g + (self.b_ / u_size))
+                        if g + (self.b_ / u_size) > 0:
+                            j_predictions.append(self.positive)
+                        else:
+                            j_predictions.append(self.negative)
+                        #print(g + (self.b_ / u_size))
+
+                instance_predictions.append(np.array(j_predictions))
+            return np.array(bag_predictions), instance_predictions
 
 
     def get_params(self, deep=True):
@@ -137,7 +178,24 @@ class MILES(LenearProblem):
 
         return X, y
 
-    def _similarity(self, bags, Y): # this method is like kernel function
+    def _distance(self, bag, y, rtype='min'):
+        if self.distance == 'euclidean':
+            """
+            (bag - Y[k]) * (bag - Y[k]).T is like a correlation matrix 
+            i want a norm only so i take it from matrix by diag
+
+            """
+            # return eval('np.{0}(np.diag((bag - y) * (bag - y).T))'.format(rtype)) <- i think it is enough...
+            if rtype == 'min':
+                return eval('np.{0}(np.diag((bag - y) * (bag - y).T))'.format(rtype))
+            else:
+                distances = np.diag((bag - y) * (bag - y).T)
+                return np.where(distances == np.min(distances))[0]
+
+        else:
+            raise ValueError("{0} is invalid distance method".format(self.distance))
+
+    def _similarity(self, bags, Y, rtype='min'): # this method is like kernel function
         if self.similarity == 'rbf':
             """
             m = (min_j|x1j - X1|, min_j|x1j - X2|, ... , min_j|x1j - Xn|) 
@@ -153,14 +211,38 @@ class MILES(LenearProblem):
                 for k in range(Y.shape[0]):
                     #print(bag.shape)
                     #print(((bag - Y[k]) * (bag - Y[k]).T).shape)
-                    """
-                    (bag - Y[k]) * (bag - Y[k]).T is like a correlation matrix 
-                    i want a norm only so i take it from matrix by diag
-                    
-                    """
-                    d.append(np.min(np.diag((bag - Y[k]) * (bag - Y[k]).T)))
+                    d.append(self._distance(bag, Y[k], rtype=rtype))
                 m.append(d)
-            m = np.asmatrix(np.array(m))
-            return np.exp(-self.gamma * m)
+            if rtype == 'min':
+                m = np.asmatrix(np.array(m))
+                return np.exp(-self.gamma * m)
+            else: # argmin
+                #U = np.asmatrix(np.array(m), dtype=int) U is inbalanced list
+                # return U
+                return m
         else:
             raise ValueError("{0} is invalid similarity".format(self.similarity))
+    """
+    def _arg_similarity(self, bags, Y):
+        if self.similarity == 'rbf':
+            
+            #U = (argmin_j|x1j - X1|, argmin_j|x1j - X2|, ... , argmin_j|x1j - Xn|) 
+            #    (argmin_j|x2j - X1|, argmin_j|x2j - X2|, ... , argmin_j|x2j - Xn|)
+            #    ...
+            #    (argmin_j|x(|nonzero_w|)j - X1|, argmin_j|x(|nonzero_w|)j - X2|, ... , argmin_j|x(|nonzero_w|)j - Xn|)
+            #
+            #note that j for each bag is different size
+            
+            U = []
+            for bag in bags:
+                u = []  # u means the nearest instance index to Xk
+                for k in range(Y.shape[0]):
+                    #print(self._distance(bag, Y[k], rtype='argmin')) # return int
+
+                    u.append(self._distance(bag, Y[k], rtype='argmin'))
+                U.append(np.array(u, dtype=int))
+
+            return U
+        else:
+            raise ValueError("{0} is invalid similarity".format(self.similarity))
+    """
