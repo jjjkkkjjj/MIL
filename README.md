@@ -5,3 +5,7 @@
 `scipy`
 `scikit-learn`
 `nose`
+
+## Usage
+
+See [milestest.ipynb](https://github.com/jjjkkkjjj/MIL/blob/master/test/milestest.ipynb)
